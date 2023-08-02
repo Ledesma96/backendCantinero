@@ -56,5 +56,8 @@ app.post("/create_preference", (req, res) => {
       });
     });
 });
+app.get("/", (req, res) => {
+  res.render("hola")
+})
 
 app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
