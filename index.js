@@ -1,7 +1,6 @@
 // server.js
 import express from "express";
 import mercadopago from "mercadopago";
-import cors from "cors"
 
 const app = express();
 const PORT = process.env.PORT || 8080
@@ -57,10 +56,10 @@ app.post("/create_preference", (req, res) => {
     });
 });
 app.get("/", (req, res) => {
-  // Contenido que deseas mostrar en pantalla
+
   const contenido = "<h1>Hola Mundoo!</h1>";
 
-  // Enviar el contenido directamente al cliente
+ 
   res.send(contenido);
 });
 app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
