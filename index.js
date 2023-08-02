@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 8080
 app.use(express.json());
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://cantinero.vercel.app/');
+  res.setHeader('Access-Control-Allow-Origin', 'https://cantinero.vercel.app/#/cart');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
@@ -58,7 +58,7 @@ app.post("/create_preference", (req, res) => {
 });
 app.get("/", (req, res) => {
   // Contenido que deseas mostrar en pantalla
-  const contenido = "<h1>Hola Mundo!</h1>";
+  const contenido = "<h1>Hola Mundoo!</h1>";
 
   // Enviar el contenido directamente al cliente
   res.send(contenido);
